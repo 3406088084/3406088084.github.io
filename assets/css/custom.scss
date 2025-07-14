@@ -2,6 +2,140 @@
 @import "minima/skins/{{ site.minima.skin | default: 'classic' }}";
 @import "minima/initialize";
 
+// 首页专用样式
+.home-page {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    
+    .col {
+      flex: 1;
+      min-width: 300px;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    height: 100%;
+    transition: transform 0.3s;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    h2 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $border-color;
+    }
+    
+    &.computer-science {
+      border-top: 4px solid #2563eb;
+    }
+    
+    &.transportation {
+      border-top: 4px solid #10b981;
+    }
+  }
+  
+  .article {
+    padding: 15px 0;
+    border-bottom: 1px dashed $border-color;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+    
+    h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+    
+    .meta {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: $grey-600;
+      
+      .category {
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-weight: 500;
+        
+        &.computer-science {
+          background: rgba(37, 99, 235, 0.1);
+          color: #2563eb;
+        }
+        
+        &.transportation {
+          background: rgba(16, 185, 129, 0.1);
+          color: #10b981;
+        }
+        
+        &.hybrid {
+          background: rgba(139, 92, 246, 0.1);
+          color: #8b5cf6;
+        }
+      }
+    }
+    
+    p {
+      margin: 0;
+      color: $grey-700;
+    }
+  }
+  
+  .resources {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    
+    .resource {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px;
+      border: 1px solid $border-color;
+      border-radius: 6px;
+      text-decoration: none;
+      color: $grey-800;
+      transition: all 0.2s;
+      
+      &:hover {
+        background: $grey-100;
+        border-color: $primary;
+        
+        i {
+          color: $primary;
+        }
+      }
+      
+      i {
+        font-size: 24px;
+        color: $grey-600;
+        transition: color 0.2s;
+      }
+      
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
 // 技术文档增强
 div.highlight {
   border-radius: 8px;
