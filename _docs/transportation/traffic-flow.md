@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 交通流理论
-parent: 交通工程
-grand_parent: 文档
+parent: transportation
+grand_parent: _docs
 nav_order: 1
 date: 2023-10-10
 ---
