@@ -40,14 +40,17 @@ nav_order: 1
 <div class="card">
   <h2><i class="fas fa-newspaper"></i> 最新文章</h2>
   
-  <div class="article">
-    <h3><a href="/docs/computer-science/quantum-computing">量子计算在交通优化中的应用</a></h3>
-    <div class="meta">
-      <span class="category computer-science">计算机科学</span>
-      <span class="date">2023年10月15日</span>
-    </div>
-    <p>本文探讨量子计算如何解决传统交通优化中的NP难题，包括交通信号优化和路线规划...</p>
+
+{% for post in site.posts limit:5 %}
+<div class="article">
+  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <div class="meta">
+    <span class="category {{ post.category | downcase | replace: ' ', '-' }}">{{ post.category }}</span>
+    <span class="date">{{ post.date | date: "%Y年%m月%d日" }}</span>
   </div>
+  <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+</div>
+{% endfor %}
   
   <div class="article">
     <h3><a href="/docs/transportation/v2x">V2X通信技术在智能交通系统中的应用</a></h3>
