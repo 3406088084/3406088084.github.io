@@ -19,7 +19,13 @@ aux_links:
     - "https://github.com/yourusername/your-repo"
   "联系作者":
     - "mailto:contact@example.com"
-
+    
+# 首页最新文章配置
+recent_posts:
+  enabled: true
+  count: 5
+  categories: ["计算机科学", "交通工程"]
+  
 # 插件
 plugins:
   - jekyll-seo-tag
