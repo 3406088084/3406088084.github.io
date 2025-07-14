@@ -28,7 +28,6 @@ recent_posts:
   
 # 插件
 plugins:
-  - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
 
