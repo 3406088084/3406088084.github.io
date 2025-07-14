@@ -1,0 +1,47 @@
+// 添加自定义样式
+@import "minima/skins/{{ site.minima.skin | default: 'classic' }}";
+@import "minima/initialize";
+
+// 技术文档增强
+div.highlight {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+// 数学公式样式
+.MathJax_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0;
+}
+
+// 表格增强
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  
+  th {
+    background-color: $grey-dk-100;
+    color: white;
+  }
+  
+  td, th {
+    padding: 0.75rem;
+    border: 1px solid $border-color;
+  }
+}
+
+// 专业提示框
+.engineering-note {
+  border-left: 4px solid #1e88e5;
+  background-color: #e3f2fd;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0 4px 4px 0;
+  
+  strong {
+    color: #0d47a1;
+  }
+}
