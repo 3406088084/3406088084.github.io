@@ -1,8 +1,8 @@
 ---
 layout: default
 title: 算法精要
-parent: 计算机科学
-grand_parent: 文档
+parent: computer-science
+grand_parent: ——docs
 nav_order: 2
 date: 2023-10-15
 ---
