@@ -1,8 +1,41 @@
-title: Open Magic Blog
-description: My personal blog website
+# Jekyll 基本配置
+title: "技术知识库"
+description: "计算机科学与交通工程专业技术文章"
+baseurl: "/"
+url: "https://3406088084.github.io.com"
+
+# Just the Docs 配置
 theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs@v0.6.0
 
-url: https://3406088084.github.io
+# 搜索功能
+search_enabled: true
+search:
+  provider: lunr
 
+# 导航结构
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  "GitHub 仓库":
+    - "https://github.com/yourusername/your-repo"
+  "联系作者":
+    - "mailto:contact@example.com"
+
+# 插件
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+# 技术分类
+collections:
+  docs:
+    output: true
+    permalink: /:path/
+
+# 数学公式支持
+mathjax: true
+mathjax_path: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+
+# 图表支持
+mermaid: true
+mermaid_path: "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"
